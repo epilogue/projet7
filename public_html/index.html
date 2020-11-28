@@ -9,8 +9,25 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+            
+            <div id='map' style='position: absolute;top:0;bottom:0; width: 100%;'></div>
+        </div>
+        
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZXBpbG9ndWU1OSIsImEiOiJja2kxNzUxN24yZjAzMnpwNXhhbmJhcnY5In0.tIybF4n8EY4hFvBOlNx-ZA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/basic-v9',
+   center: [-1.51, 47.23],
+   zoom: 15,
+   pitch: 50,
+   bearing: -10 // Rotation
+  });
+</script>
     </body>
 </html>
