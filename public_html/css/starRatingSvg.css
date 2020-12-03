@@ -1,0 +1,44 @@
+.jq-stars {
+    display: inline-block;
+}
+
+.jq-rating-label {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    font-family: helvetica, arial, verdana;
+}
+
+.jq-star {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+svg.jq-star-svg {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+.jq-star-svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.jq-star:hover .fs-star-svg polygon {
+}
+
+.jq-star-svg polygon {
+    stroke: #000;
+    stroke-linejoin: round;
+}
+
+/* un-used */
+.jq-shadow {
+    -webkit-filter: drop-shadow( -2px -2px 2px #888 );
+    filter: drop-shadow( -2px -2px 2px #888 );
+}
+

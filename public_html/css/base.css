@@ -1,0 +1,28 @@
+
+/* 
+    Created on : 28 nov. 2020, 14:21:13
+    Author     : epilogue
+*/
+body{
+    width: 100%;
+}
+
+#map{ /* hauteur obkigatoire */
+    height:600px;
+ }
+ 
+ .awesome-marker i {
+    font-size: 18px;
+    margin-top: 8px;
+}
+.commentaireResto{
+    display:none;
+}
+
+#filtres{
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+}

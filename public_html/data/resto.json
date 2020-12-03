@@ -1,0 +1,132 @@
+[
+
+   {
+      "restaurantName":"Bronco",
+      "address":"39 Rue des Petites Écuries, 75010 Paris",
+      "lat":47.28,
+      "long":-1.50,
+      "ratings":[
+         {
+            "stars":4,
+            "comment":"Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
+         },
+         {
+            "stars":5,
+            "comment":"Tout simplement mon restaurant préféré !"
+         }
+      ]
+   },
+
+   {
+
+      "restaurantName":"Babalou",
+
+      "address":"4 Rue Lamarck, 75018 Paris",
+
+      "lat":47.29,
+
+      "long":-1.52,
+
+      "ratings":[
+
+         {
+
+            "stars":5,
+
+            "comment":"Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
+
+         },
+
+         {
+
+            "stars":3,
+
+            "comment":"J'ai trouvé ça correct, sans plus"
+
+         }
+
+      ]
+
+   },
+   {
+      "restaurantName":"Le melting potes",
+      "address":"26 Boulevard de la Prairie au Duc, 44200 Nantes",
+      "lat":47.21,
+      "long":-1.55,
+      "ratings":[
+         {
+            "stars":1,
+            "comment":"J'ai pris à emporter et j'ai été super déçue. Le pain est bon, heureusement d'ailleurs parce qu'en terme de garniture, c'est franchement léger... Le steak est minuscule, la portion de frites manque elle aussi de générosité... Bref, je m'étais fiée à la réputation de l'enseigne, on ne m'y prendra plus"
+         },
+         {
+            "stars":1,
+            "comment":"Un endroit incroyable. Moi et mon copain avons passé une soirée exceptionnelle, nous avons bien mangé, bien ri, et surtout nous avons été surpris ! Les hamburgers sont délicieux, généreux, et originaux ! Les tarifs sont raisonnables,"
+         },
+         {
+            "stars":1,
+            "comment":"À découvrir absolument ! Nantais ou de passage... Endroit incontournable😍 Super ambiance et produits de qualité "
+         }
+      ]
+   },
+   {
+      "restaurantName":"bento sakura",
+      "address":"17 Rue Louis Blanc, 44200 Nantes",
+      "lat":47.21,
+      "long":-1.55,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Très bon, juste un peu trop d'attente pour le plat de résistance, ce qui n'est pas gênant le WE mais quand on doit reprendre le boulot c'est différent"
+            },
+         {
+            "stars":4,
+            "comment":"Il s'agit d'un restaurant qui fait uniquement des bentos. Ça change effectivement des sushis et on a apprécié les bentos (de 11,50 € à 15 €). Par contre, il n'y a que 3 types de bentos, et la base est apparemment la même pour chacun avec du riz, une salade, des haricots rouges"
+            },
+         {
+            "stars":5,
+            "comment":"Très bon accueil, les bentos sont bons, et on peut varier avec le bento du jour, tout comme les croquettes et les gyozas!"
+         }
+      ]
+   },
+    {
+      "restaurantName":"test2",
+      "address":"17 Rue Louis Blanc, 44200 Nantes",
+      "lat":47.24,
+      "long":-1.55,
+      "ratings":[
+         {
+            "stars":2,
+            "comment":"Très bon, juste un peu trop d'attente pour le plat de résistance, ce qui n'est pas gênant le WE mais quand on doit reprendre le boulot c'est différent"
+            },
+         {
+            "stars":2,
+            "comment":"Il s'agit d'un restaurant qui fait uniquement des bentos. Ça change effectivement des sushis et on a apprécié les bentos (de 11,50 € à 15 €). Par contre, il n'y a que 3 types de bentos, et la base est apparemment la même pour chacun avec du riz, une salade, des haricots rouges"
+            },
+         {
+            "stars":2,
+            "comment":"Très bon accueil, les bentos sont bons, et on peut varier avec le bento du jour, tout comme les croquettes et les gyozas!"
+         }
+      ]
+   },
+    {
+      "restaurantName":"test3",
+      "address":"17 Rue Louis Blanc, 44200 Nantes",
+      "lat":47.23,
+      "long":-1.55,
+      "ratings":[
+         {
+            "stars":3,
+            "comment":"Très bon, juste un peu trop d'attente pour le plat de résistance, ce qui n'est pas gênant le WE mais quand on doit reprendre le boulot c'est différent"
+            },
+         {
+            "stars":3,
+            "comment":"Il s'agit d'un restaurant qui fait uniquement des bentos. Ça change effectivement des sushis et on a apprécié les bentos (de 11,50 € à 15 €). Par contre, il n'y a que 3 types de bentos, et la base est apparemment la même pour chacun avec du riz, une salade, des haricots rouges"
+            },
+         {
+            "stars":3,
+            "comment":"Très bon accueil, les bentos sont bons, et on peut varier avec le bento du jour, tout comme les croquettes et les gyozas!"
+         }
+      ]
+   }
+
+]
