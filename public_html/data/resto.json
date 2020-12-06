@@ -3,8 +3,8 @@
    {
       "restaurantName":"Bronco",
       "address":"39 Rue des Petites Écuries, 75010 Paris",
-      "lat":47.28,
-      "long":-1.50,
+      "lat":48.87376322061839,
+      "long": 2.3501041703059644,
       "ratings":[
          {
             "stars":4,
@@ -20,13 +20,9 @@
    {
 
       "restaurantName":"Babalou",
-
       "address":"4 Rue Lamarck, 75018 Paris",
-
       "lat":47.29,
-
       "long":-1.52,
-
       "ratings":[
 
          {
@@ -51,28 +47,28 @@
    {
       "restaurantName":"Le melting potes",
       "address":"26 Boulevard de la Prairie au Duc, 44200 Nantes",
-      "lat":47.21,
-      "long":-1.55,
+      "lat":47.20528104604436, 
+      "long":-1.5578047305648062,
       "ratings":[
          {
-            "stars":1,
+            "stars":5,
             "comment":"J'ai pris à emporter et j'ai été super déçue. Le pain est bon, heureusement d'ailleurs parce qu'en terme de garniture, c'est franchement léger... Le steak est minuscule, la portion de frites manque elle aussi de générosité... Bref, je m'étais fiée à la réputation de l'enseigne, on ne m'y prendra plus"
          },
          {
-            "stars":1,
+            "stars":5,
             "comment":"Un endroit incroyable. Moi et mon copain avons passé une soirée exceptionnelle, nous avons bien mangé, bien ri, et surtout nous avons été surpris ! Les hamburgers sont délicieux, généreux, et originaux ! Les tarifs sont raisonnables,"
          },
          {
-            "stars":1,
+            "stars":5,
             "comment":"À découvrir absolument ! Nantais ou de passage... Endroit incontournable😍 Super ambiance et produits de qualité "
          }
       ]
    },
    {
-      "restaurantName":"bento sakura",
+      "restaurantName":"la boucherie",
       "address":"17 Rue Louis Blanc, 44200 Nantes",
-      "lat":47.21,
-      "long":-1.55,
+      "lat":47.190007750256385,  
+      "long": -1.4711594590462125,
       "ratings":[
          {
             "stars":5,
@@ -89,42 +85,62 @@
       ]
    },
     {
-      "restaurantName":"test2",
-      "address":"17 Rue Louis Blanc, 44200 Nantes",
-      "lat":47.24,
-      "long":-1.55,
+      "restaurantName":"Au garde Manger",
+      "address":"1 rue de terre Adélie, 44115 Basse Goulaines",
+      "lat":47.21811010858243, 
+      "long":-1.5343907143042466,
       "ratings":[
          {
-            "stars":2,
-            "comment":"Très bon, juste un peu trop d'attente pour le plat de résistance, ce qui n'est pas gênant le WE mais quand on doit reprendre le boulot c'est différent"
+            "stars":5,
+            "comment":"Très bonne adresse, de loin la meilleure à Nantes selon moi (et c'est sincère !!!) "
             },
          {
-            "stars":2,
-            "comment":"Il s'agit d'un restaurant qui fait uniquement des bentos. Ça change effectivement des sushis et on a apprécié les bentos (de 11,50 € à 15 €). Par contre, il n'y a que 3 types de bentos, et la base est apparemment la même pour chacun avec du riz, une salade, des haricots rouges"
+            "stars":5,
+            "comment":"Travaillant juste à côté, j'y vais en général au moins une fois par semaine, et je n'ai encore jamais été déçu. Il y a trois plats différent par jour dont au moins un végétarien"
             },
          {
-            "stars":2,
-            "comment":"Très bon accueil, les bentos sont bons, et on peut varier avec le bento du jour, tout comme les croquettes et les gyozas!"
+            "stars":5,
+            "comment":"Accueil toujours chaleureux. Des plats savoureux et copieux, renouvelés quotidiennement. Un vrai plaisir de s'y arrêter déjeuner. Merci !"
          }
       ]
    },
     {
-      "restaurantName":"test3",
-      "address":"17 Rue Louis Blanc, 44200 Nantes",
-      "lat":47.23,
-      "long":-1.55,
+      "restaurantName":"Le rouge ardoise",
+      "address":"48 rue saint-jacques, 44200 Nantes",
+      "lat":47.199480943940024, 
+      "long":-1.541042596463299,
       "ratings":[
          {
-            "stars":3,
-            "comment":"Très bon, juste un peu trop d'attente pour le plat de résistance, ce qui n'est pas gênant le WE mais quand on doit reprendre le boulot c'est différent"
+            "stars":5,
+            "comment":"Un repas exquis !! Le mélange des saveurs est fantastique en bouche. Les recettes et la présentation des plats sont très recherchées. "
+            },
+         {
+            "stars":4,
+            "comment":"Cuisine simple sur le papier (ex : œufs mimosa), mais soigné et bien présentée. Terrasse super agréable pour cette journée de fin d'été. Seul 'regret' : un seul cuisinier, donc un service un petit peu lent."
             },
          {
             "stars":3,
-            "comment":"Il s'agit d'un restaurant qui fait uniquement des bentos. Ça change effectivement des sushis et on a apprécié les bentos (de 11,50 € à 15 €). Par contre, il n'y a que 3 types de bentos, et la base est apparemment la même pour chacun avec du riz, une salade, des haricots rouges"
+            "comment":"Vin de petite quantité de table sortant du réfrigérateur et non d'une cave, plat cabillaud non cuit assiette froide pour un remplacement par un morceau de dorade classique  ( mieux à la maison) non même pas digne d'une brasserie dommage à éviter à tout"
+         }
+      ]
+   },
+    {
+      "restaurantName":"La peau de vache",
+      "address":"8 rue Aristide et Marguerite Boucicaut, 44700 Orvault",
+      "lat":47.263450020898496, 
+      "long":-1.5930390411119737,
+      "ratings":[
+         {
+            "stars":1,
+            "comment":"Serveur exécrable!!! Du jamais vu alors que nous avions réservé pour 20h30 au moment de prendre la commande  de l’apéritif  le serveur un petit jeune s’occupant du fond de la salle nous dit par contre il va falloir manger vite "
+            },
+         {
+            "stars":4,
+            "comment":"Très beau restaurant, malgré des couteaux qui ne coupent pas. La décoration est originale, et l’ambiance très sympathique !Le choix des plats est correct. Nous y avons très bien mangé."
             },
          {
             "stars":3,
-            "comment":"Très bon accueil, les bentos sont bons, et on peut varier avec le bento du jour, tout comme les croquettes et les gyozas!"
+            "comment":"J'ai trouvé un changement en mieux depuis que je suis venu la dernière fois (1 an environ). Le cadre est sympathique et  le personnel au petit soin sans être envahissant. Nous avons très bien mangé et apprécié la viande, le vin. Une très bonne soirée"
          }
       ]
    }
