@@ -8,6 +8,11 @@ $(document).ready(function(){
     * si le navigateur ne prend pas en charge la geolocalisation
     * si l'utilisateur refuse d'activer la géolocalisation alors le placer automatiquement au centre de la carte  
     * */
+   jQuery.ajaxPrefilter(function(options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+});
    const defaut={ centre: { lat: 48.852969, lon: 2.349903}};
  
    //const textInfoGeoloc = $('# textInfoGeoloc');
@@ -24,6 +29,7 @@ $(document).ready(function(){
        /*initialisation resto*/
         $.getJSON("data/resto.json",function(json){
             initRestoBis(json);
+            
         });
         $.getJSON("data/apiKey.json",function(json){
             $(json).each(function(i, api){

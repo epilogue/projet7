@@ -10,7 +10,7 @@ function initMap(lat,lon){
     /*initialisation de la carte */
     macarte = new google.maps.Map(document.getElementById("map"),{
         center: new google.maps.LatLng(lat,lon),
-        zoom: 11, 
+        zoom: 16, 
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         scrollwheel: false
         }                 
@@ -58,5 +58,20 @@ function initMap(lat,lon){
         $('#modalAjoutResto #LongFormMarker').val(long);
         $('#modalAjoutResto').modal().show();
     });
+    var userPosition = new google.maps.LatLng(lat,lon);
+    var service;
+    var request = {
+        location:userPosition,
+        radius : '1200',
+        type :['restaurant']
+    };
+   service = new google.maps.places.PlacesService(macarte);
+
+    service.nearbySearch(request, callback);
+    function callback(results,status){
+        if (status == google.maps.places.PlacesServiceStatus.OK){
+             initRestoMap(results);
+        }
+    }
 }   
  

@@ -1,8 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 var iconResto ={ url  :'http://localhost:8383/googleMapsProject/img/icons/utensils.png',
                     scaledSize :new google.maps.Size(25,25),
                     origin : new google.maps.Point(0,0),
@@ -24,16 +19,16 @@ class Restaurant {
         this.popup = popup;
         this.rendu = new RenduRestaurant(id);
     }
+    
     calculMoyenne(){
         var moy=parseInt(0);
         for(var note of this.ratings){
-          console.log(note);
             moy += parseInt(note.stars);
         }
         moy = parseFloat((moy/this.ratings.length).toFixed(1));
-        this.moyenne = moy;
-       
+        this.moyenne = moy;  
     }
+    
     ajoutMarker(){
         this.marker = new google.maps.Marker({
             position :{lat :this.lat,lng:this.long},
