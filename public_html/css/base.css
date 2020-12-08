@@ -10,9 +10,10 @@ body{
     font-size: 48px;
     text-align: center;
 }
+
 #map{ /* hauteur obkigatoire */
     height:600px;
- }
+}
 
 .commentaireResto, .image{
     display:none;
@@ -23,13 +24,33 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left:auto;
-    margin-right: auto;
-    
+    margin-right: auto;    
 }
+
 #nbreEtoile{
    width: 100%;
    border:0;
-   color:#f6931f;
+   color:#138496;
    font-weight:bold;
    text-align: center;
+}
+
+.modal-content{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border-color:#138496;
+    border-width: thick;
+    border-style:solid;
+    padding:15px;
+    color:#138496;
+}
+.gm-style-iw, .gm-style-iw-c{
+    text-align: center;
+}
+h4{
+     color:#138496;
+}
+li{
+    list-style: none;  
 }

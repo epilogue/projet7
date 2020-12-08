@@ -84,7 +84,7 @@
          }
       ]
    },
-    {
+   {
       "restaurantName":"Au garde Manger",
       "address":"1 rue de terre Adélie, 44115 Basse Goulaines",
       "lat":47.21811010858243, 
@@ -104,7 +104,7 @@
          }
       ]
    },
-    {
+   {
       "restaurantName":"Le rouge ardoise",
       "address":"48 rue saint-jacques, 44200 Nantes",
       "lat":47.199480943940024, 
@@ -124,7 +124,7 @@
          }
       ]
    },
-    {
+   {
       "restaurantName":"La peau de vache",
       "address":"8 rue Aristide et Marguerite Boucicaut, 44700 Orvault",
       "lat":47.263450020898496, 

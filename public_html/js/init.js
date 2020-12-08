@@ -20,15 +20,15 @@ $(document).ready(function(){
        var lat = position.coords.latitude;
        var lon = position.coords.longitude;
        initMap(lat,lon);
+
        /*initialisation resto*/
         $.getJSON("data/resto.json",function(json){
-//           initResto(json);
-           initRestoBis(json);
+            initRestoBis(json);
         });
         $.getJSON("data/apiKey.json",function(json){
-           $(json).each(function(i, api){
+            $(json).each(function(i, api){
               var apiKey= api.googleApiKey;
-           });
+            });
         });
         rangeSlider();
    }
@@ -40,6 +40,17 @@ $(document).ready(function(){
         var lon = defaut.centre.lon;
         initMap(lat,lon);
    }
+   $("#btnValid").click(function(e){
+       e.preventDefault();
+       RenduRestaurant.testClose();
+   });
+   $("#btnValidFormMarker").click(function(e){
+       e.preventDefault();
+       $("#AdresseFormMarker").attr('disabled',false);
+        $("#LatFormMarker").attr('disabled',false);
+         $("#LongFormMarker").attr('disabled',false);
+       RenduRestaurant.ajoutRestoMapClose();
+   });
 });
 
 

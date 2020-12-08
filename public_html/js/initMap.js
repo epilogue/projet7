@@ -14,7 +14,7 @@ function initMap(lat,lon){
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         scrollwheel: false
         }                 
-    )
+    );
     /*initialisation du marqueur de l'utilisateur*/
     var markerU = new google.maps.Marker({
         position :new google.maps.LatLng(lat,lon),
@@ -23,13 +23,40 @@ function initMap(lat,lon){
     /* placement du marqueur sur la carte*/
     markerU.setMap(macarte);
     /*recuperation de l'apiKey*/
-   $.getJSON("data/apiKey.json",function(json){
-               $(json).each(function(i, api){
-                   apiKey= api.googleApiKey;
-                  console.log(apiKey);
-               });
-          });
-         
+    $.getJSON("data/apiKey.json",function(json){
+        $(json).each(function(i, api){
+           apiKey= api.googleApiKey;
+        });
+    });
+    google.maps.event.addListener(macarte, 'click', function (event) {
+        var coords1 = new google.maps.LatLng(event.latLng.lat(), event.latLng.lng());
+        var coords =coords1.toJSON();
+        var lat =(coords.lat).toString();
+        var long = (coords.lng).toString();
+        var geocoder = new google.maps.Geocoder;
+            var latlng = new google.maps.LatLng(lat, long);
 
-};
+            geocoder.geocode({'latLng': latlng}, function(results, status) {
+                if(status == google.maps.GeocoderStatus.OK) {
+                    if(results[0]) {
+                        var address =results[0].formatted_address;
+                    } else {
+                        alert("pas d'adresse");
+                    }
+                } else {
+                    var error = {
+                        'ZERO_RESULTS': 'pas de résultat'
+                    }
+                
+            $('#address_new').html('<span class="color-red">' + error[status] + '</span>');
+        } $('#modalAjoutResto #AdresseFormMarker').val(address);
+});
+        
+
+       
+        $('#modalAjoutResto #LatFormMarker').val(lat);
+        $('#modalAjoutResto #LongFormMarker').val(long);
+        $('#modalAjoutResto').modal().show();
+    });
+}   
  
