@@ -1,5 +1,5 @@
-var iconResto ={ url  :'http://localhost:8383/googleMapsProject/img/icons/utensils.png',
-                    scaledSize :new google.maps.Size(25,25),
+var iconResto ={ url  :'/googleMapsProject/img/icons/restaurant.jpg',
+                    scaledSize :new google.maps.Size(50,50),
                     origin : new google.maps.Point(0,0),
                     anchor : new google.maps.Point(25,50)
                 };
@@ -18,6 +18,8 @@ class Restaurant {
         this.marker = marker;
         this.popup = popup;
         this.rendu = new RenduRestaurant(id);
+        this.distanceUser = Math.abs(distance(this.lat, this.long, userPos.lat, userPos.long, 'M'));
+        //console.log(this.distanceUser);
     }
     
     calculMoyenne(){
@@ -30,13 +32,15 @@ class Restaurant {
     }
     
     ajoutMarker(){
-        this.marker = new google.maps.Marker({
-            position :{lat :this.lat,lng:this.long},
-            map:macarte,
-            title:this.nom,
-            icon:iconResto,
-            id:this.id
-        });
+        if(this.distanceUser <= maxDistance) {
+            this.marker = new google.maps.Marker({
+                position :{lat :this.lat,lng:this.long},
+                map:macarte,
+                title:this.nom,
+                icon:iconResto,
+                id:this.id
+            });
+        }
     }
     
     ajoutPopup(){
@@ -50,6 +54,9 @@ class Restaurant {
     }
     
     ajoutEvenementClick(){
+        if(typeof this.marker == 'undefined') {
+            return;
+        }
         this.marker.addListener("click", () => {
             if(currentPopup !== null){
                 currentPopup.close(); 

@@ -15,6 +15,7 @@ var currentPopup=null;
 var collectionRestaurant=[];
 /* créer un objet restaurant global  qui  prend  resto + markerR + popup*/
 function initRestoBis(restos){
+    console.log(restos);
     $(restos).each(function(i, resto){
         var restoC=new Restaurant(i,resto.restaurantName,resto.address,resto.lat,resto.long,resto.ratings);
         restoC.initRestoSolo();

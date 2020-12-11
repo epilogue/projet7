@@ -6,6 +6,9 @@ class RenduRestaurant {
     /* function qui affiche les infos d'un resto*/
     afficheMoi(){
         var restaurant = collectionRestaurant[this.parent];
+        if(restaurant.distanceUser > maxDistance) {
+            return;
+        }
         var commentaire = [];
         for(var co of restaurant.ratings){
              commentaire +="<li class='commentaireResto' > note : "+co.stars + "/5 <br> "+co.comment+"</li>";
@@ -94,7 +97,10 @@ function rangeSlider(){
           change: function( event, ui ) {
                     var minEtoiles = ui.values[0];
                     var maxEtoiles = ui.values[1];
-                    currentPopup.close();
+                    if(currentPopup !==null){
+                         currentPopup.close();
+                    }
+                   
                     $("li.opened").css('display','none');
                     showResto(minEtoiles, maxEtoiles); 
                 }
@@ -111,9 +117,9 @@ function showResto(minEtoiles,maxEtoiles){
     $("#listeResto li[data-stars]").filter(function(){
         var idResto = parseInt($(this).parent().attr('id'));
         var markerEtoile = collectionRestaurant[idResto].marker;
-        var etoile = parseInt($(this).data("stars"));
+        var etoile = parseFloat($(this).data("stars"));
 
-        if(etoile >=minEtoiles && etoile<= maxEtoiles){
+        if(etoile >minEtoiles && etoile<=maxEtoiles){
             $(this).show(); 
              markerEtoile.setVisible(true);
         }else{
