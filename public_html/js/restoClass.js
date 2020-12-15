@@ -1,7 +1,8 @@
-var iconResto ={ url  :'/googleMapsProject/img/icons/restaurant.jpg',
-                    scaledSize :new google.maps.Size(50,50),
+var iconResto ={ url  :'/projet7/img/icons/restaurant.jpg',
+                    scaledSize :new google.maps.Size(25,25),
                     origin : new google.maps.Point(0,0),
-                    anchor : new google.maps.Point(25,50)
+                    anchor : new google.maps.Point(0,0),
+                    size :new google.maps.Size(70,70)
                 };
 /*creer la class  le constructeur ajouter les methodes  ajouter un marker ajouter un infowindow   créer un resto, ajouter un commentaire*/
 class Restaurant {
@@ -38,7 +39,10 @@ class Restaurant {
                 map:macarte,
                 title:this.nom,
                 icon:iconResto,
-                id:this.id
+                id:this.id,
+                label:this.nom,
+                labelOrigin:(-50,30) 
+               
             });
         }
     }
@@ -95,5 +99,12 @@ class Restaurant {
         this.ajoutVisuel();
         collectionRestaurant.push(this); 
         this.rendu.afficheMoi();
+    }
+   clickListe(){
+       $("#listeResto ul#"+this.id+" li[data-stars]").unbind("click");
+        $("#listeResto ul#"+this.id+" li[data-stars]").click(function(){
+             var idResto = parseInt($(this).parent().attr('id'));
+             afficheDetail(idResto);
+        });
     }
 }

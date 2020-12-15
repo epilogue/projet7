@@ -11,7 +11,7 @@ var iconU ={ url  :'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
 var apiKey = null;
 var macarte=null;
 var userPos  = {'lat': 0, 'long': 0};
-var maxDistance = 3000;
+var maxDistance = 2000;
 function distance(lat1, lon1, lat2, lon2, unit) {
     if ((lat1 == lat2) && (lon1 == lon2)) {
             return 0;
@@ -40,9 +40,18 @@ function initMap(lat,lon){
         center: new google.maps.LatLng(lat,lon),
         zoom: 16, 
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: true
-        }                 
-    );
+        scrollwheel: false,
+        styles: [
+          {
+            "featureType": "poi",
+            "stylers": [
+              { "visibility": "off" }
+            ]
+          }
+        ]       
+    });
+  
+
     /*initialisation du marqueur de l'utilisateur*/
     var markerU = new google.maps.Marker({
         position :new google.maps.LatLng(lat,lon),
@@ -65,26 +74,24 @@ function initMap(lat,lon){
         var lat =(coords.lat).toString();
         var long = (coords.lng).toString();
         var geocoder = new google.maps.Geocoder;
-            var latlng = new google.maps.LatLng(lat, long);
+        var latlng = new google.maps.LatLng(lat, long);
 
-            geocoder.geocode({'latLng': latlng}, function(results, status) {
-                if(status == google.maps.GeocoderStatus.OK) {
-                    if(results[0]) {
-                        var address =results[0].formatted_address;
-                    } else {
-                        alert("pas d'adresse");
-                    }
+        geocoder.geocode({'latLng': latlng}, function(results, status) {
+            if(status == google.maps.GeocoderStatus.OK) {
+                if(results[0]) {
+                    var address =results[0].formatted_address;
                 } else {
-                    var error = {
-                        'ZERO_RESULTS': 'pas de résultat'
-                    }
-                
-            $('#address_new').html('<span class="color-red">' + error[status] + '</span>');
-        } $('#modalAjoutResto #AdresseFormMarker').val(address);
-});
-        
+                    alert("pas d'adresse");
+                }
+            } else {
+                var error = {
+                    'ZERO_RESULTS': 'pas de résultat'
+                }        
+                $('#address_new').html('<span class="color-red">' + error[status] + '</span>');
+            } 
+            $('#modalAjoutResto #AdresseFormMarker').val(address);
+        });
 
-       
         $('#modalAjoutResto #LatFormMarker').val(lat);
         $('#modalAjoutResto #LongFormMarker').val(long);
         $('#modalAjoutResto').modal().show();
@@ -93,7 +100,7 @@ function initMap(lat,lon){
     var service;
     var request = {
         location:userPosition,
-        radius : '3000',
+        radius : maxDistance,
         type :['restaurant']
     };
    service = new google.maps.places.PlacesService(macarte);
@@ -101,7 +108,7 @@ function initMap(lat,lon){
     service.nearbySearch(request, callback);
     function callback(results,status){
         if (status == google.maps.places.PlacesServiceStatus.OK){
-             initRestoMap(results);
+             initRestoMap(results);           
         }
     }
 }   

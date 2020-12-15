@@ -3,6 +3,7 @@ class RenduRestaurant {
     constructor(parent){
         this.parent = parent;
     }
+   
     /* function qui affiche les infos d'un resto*/
     afficheMoi(){
         var restaurant = collectionRestaurant[this.parent];
@@ -32,8 +33,9 @@ class RenduRestaurant {
             strokeColor: '#894A00',
             strokeWidth: 10,
             starSize:25
-        }); 
-       
+        });
+        restaurant.clickListe();
+
     }
 
     static testClose() {
@@ -54,10 +56,9 @@ class RenduRestaurant {
         var adresse =$('#AdresseFormMarker').val() ;
         var note = parseInt($("#NoteFormMarker").val());        
         var ratings =[{"stars":note,"comment":com}];
-
-
         var lat = parseFloat($("#LatFormMarker").val()) ;
         var long = parseFloat($("#LongFormMarker").val()) ;
+
         var restoMap = new Restaurant(id,nom,adresse,lat,long,ratings); 
         restoMap.initRestoSolo();
         $("#FormRestoMarker").trigger("reset");
@@ -119,7 +120,7 @@ function showResto(minEtoiles,maxEtoiles){
         var markerEtoile = collectionRestaurant[idResto].marker;
         var etoile = parseFloat($(this).data("stars"));
 
-        if(etoile >minEtoiles && etoile<=maxEtoiles){
+        if(etoile >=minEtoiles && etoile<=maxEtoiles){
             $(this).show(); 
              markerEtoile.setVisible(true);
         }else{

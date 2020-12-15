@@ -14,7 +14,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
                 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/star-rating-svg@3.5.0/src/jquery.star-rating-svg.js"></script>
+        <script src="js/jquery.star-rating-svg.js"></script>
         <script src="js/init.js"></script>
         <script src="js/initMap.js"></script>
         <script src="js/resto.js"></script>
@@ -26,22 +26,33 @@
             <div id="header" class="container-fluid">
                 <div class="col-12 title">
                     <span> Avis restaurant</span>
-                    <p id="textInfoGeoloc"></p>
                 </div>
+                <div id="searchDistance">
+                            <form id="searchDistanceForm">
+                                <div class="form-group">
+                                    <label for="choixDistance">rechercher un restaurant dans un rayon de : </label>
+                                    <select class="form-control" id="choixDistance">
+                                        <option>choisissez une distance</option>
+                                        <option value="500">500 m</option>
+                                        <option value="1000">1 km</option>
+                                        <option value="1500">1,5 km</option>
+                                        <option value="2000">2 km</option>
+                                        <option value="2500">2,5 km</option>
+                                    </select>
+                                </div>
+                                <input type ="submit" id="validDistance"  class='AjoutCom btn btn-info' value="Valider" >
+                            </form>
+                        </div>
             </div>
             <div id="main" class="container-fluid">
                 <div class="row">
                     <div class="col-3" id="filtre">
                         <div id="listeResto" ></div>
-                    </div>
-
-
-                    <div id="map" class="col-9">
                         
                     </div>
-                    
+                    <div id="map" class="col-9">   
+                    </div> 
                 </div>
-
             </div>
             <div class="modal fade" id="modalAjoutCom" role="dialog" >
                 <div class="modal-dialog">
@@ -70,8 +81,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                
+                </div>   
             </div>
             <div class="modal fade" id="modalAjoutResto" role="dialog" >
                 <div class="modal-dialog">
@@ -81,18 +91,12 @@
                             <h4 class="modal-title">Ajouter un restaurant</h4>
                         </div>
                         <div class="modal-body">
-                            <form id="FormRestoMarker">
-                                <div class="form-group">
-                                    <label for="LatFormMarker">latitude</label>
-                                    <input readonly class="form-control" id="LatFormMarker">      
-                                </div>
-                                <div class="form-group">
-                                    <label for="LongFormMarker">longitude</label>
-                                    <input readonly class="form-control" id="LongFormMarker">      
-                                </div>
+                            <form id="FormRestoMarker">   
+                                    <input type="hidden" id="LatFormMarker">    
+                                    <input type="hidden" id="LongFormMarker"> 
                                  <div class="form-group">
                                     <label for="AdresseFormMarker">Adresse :</label>
-                                    <input readonly class="form-control" id="AdresseFormMarker">      
+                                    <input class="form-control" id="AdresseFormMarker" >      
                                 </div>
                                 <div class="form-group">
                                     <label for="NomFormMarker">nom</label>
@@ -116,8 +120,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
-                
+                </div>    
             </div>
 	</body>
 </html>
